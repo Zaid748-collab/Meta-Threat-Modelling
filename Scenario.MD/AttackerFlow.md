@@ -3,6 +3,7 @@ An attacker first gets user credentials (e.g., by phishing) then logs into the A
 
 
 
+```mermaid
 flowchart LR
   Attacker[Attacker] -->|1. Phishing / Credential Leak| Victim[User Account]
   Victim -->|2. Use stolen creds| AuthService[Auth Service]
