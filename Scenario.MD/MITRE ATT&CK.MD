@@ -1,5 +1,5 @@
 ### Mitre ATT&CK
-
+A globally recognised knowledge base of tactics, techniques, and procedures. It provides a structured way to understand how attackers operate, map threats to defenses, and improve detection and response.
 
 
 | Threat Scenario                  | MITRE ATT&CK Technique (ID)      | Why it matches (one sentence)                                  |
