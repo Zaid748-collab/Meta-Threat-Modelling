@@ -3,11 +3,13 @@ User devices sends login requests to the Auth Service which checks credentials a
 
 
 ```mermaid 
-flowchart TD
-  User[User App / Browser] -->|Login Request| Auth[Auth Service]
-  Auth -->|Check creds| DB[Identity DB]
-  Auth -->|Issue tokens| Gateway[API Gateway]
-  User -->|API Request (Bearer Token)| Gateway
-  Gateway -->|Forward if valid| API[Instagram API]
-  API -->|Read/Write| Storage[User Data Store]
-  API -->|Write logs| Logs[Logging & Monitoring]
+erDiagram
+    USER-APP ||--o{ AUTH-SERVICE : "sends login request"
+    AUTH-SERVICE ||--o{ IDENTITY-DB : "checks credentials in"
+    AUTH-SERVICE ||--o{ API-GATEWAY : "issues token to"
+    USER-APP ||--o{ API-GATEWAY : "sends API requests with token"
+    API-GATEWAY ||--o{ INSTAGRAM-API : "forwards valid requests to"
+    INSTAGRAM-API ||--o{ USER-DATA-STORE : "reads/writes data in"
+    API-GATEWAY ||--o{ LOGS : "writes logs to"
+    INSTAGRAM-API ||--o{ LOGS : "writes logs to"
+
