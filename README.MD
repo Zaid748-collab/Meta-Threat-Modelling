@@ -47,40 +47,4 @@ Mass scraping / abuse: Use API access to collect user data at scale.
 
 Disruption: Revoke tokens, delete content, or lock owners out.
 
-```mermaid
 
-flowchart TD
-  A[Attacker Origins
-   - Cybercriminals
-  - Fraudsters
-  - Targeted stalkers] --> B[Reconnaissance
-  - Enumerate APIs & OAuth
-  - Harvest emails & dev info]
-
-  B --> C[Weaponization
-  - Build phishing pages
-  - Create malicious apps
-  - Prepare credential stuffing tools]
-
-  C --> D[Delivery
-  - Send phishing links or SMS
-  - Publish malicious app
-  - Exploit misconfigured OAuth]
-
-  D --> E[Exploitation
-  - Credential stuffing or valid logins
-  - XSS or token theft
-  - Abuse insecure token storage]
-
-  E --> F[Persistence / Installation
-  - Register malicious OAuth app
-  - Obtain refresh tokens
-  - Create hidden dev accounts]
-
-  F --> G[Command & Control
-  - Use access tokens to call APIs
-  - Maintain covert API sessions]
-
-  G --> H[Actions on Objectives
-  - Account takeover
-  - Data exfiltration
