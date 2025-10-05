@@ -10,4 +10,4 @@ flowchart TD
   User -->|API Request (Bearer Token)| Gateway
   Gateway -->|Forward if valid| API[Instagram API]
   API -->|Read/Write| Storage[User Data Store]
-  All -->|Write logs| Logs[Logging & Monitoring]
+  API -->|Write logs| Logs[Logging & Monitoring]
